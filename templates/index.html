@@ -68,17 +68,25 @@
             border-radius: 5px;
             border: 1px solid #ddd;
         }
+
+        #status {
+            margin-top: 10px;
+            font-style: italic;
+            color: #555;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>AI Chatbot</h1>
         <p style="font-size: 18px; color: #555; margin-top: 20px; text-align: center;">Talk to your PDF and get instant answers to your questions.</p>
+
         <!-- Upload Section -->
         <div class="upload-section">
             <label for="document">Upload Document (PDF/Word):</label>
             <input type="file" id="document" name="document">
             <button class="btn" onclick="uploadFile()">Upload File</button>
+            <p id="upload-status" style="font-style: italic; color: #555;"></p>
         </div>
 
         <!-- Query Section -->
@@ -86,6 +94,7 @@
             <label for="query">Enter Your Query:</label>
             <textarea id="query" placeholder="Type your question here..."></textarea>
             <button class="btn" onclick="submitQuery()">Submit Query</button>
+            <p id="query-status" style="font-style: italic; color: #555;"></p>
         </div>
 
         <!-- Result Section -->
@@ -99,6 +108,11 @@
         function uploadFile() {
             let fileInput = document.getElementById('document');
             let formData = new FormData();
+            let uploadStatus = document.getElementById('upload-status');
+            
+            // Change status to 'Uploading'
+            uploadStatus.innerText = "Uploading...";
+            
             formData.append('file', fileInput.files[0]);
 
             fetch('/upload_document', {
@@ -107,15 +121,22 @@
             })
             .then(response => response.json())
             .then(data => {
+                // Change status to 'Uploaded' once the file is uploaded
+                uploadStatus.innerText = "Uploaded";
                 alert(data.message);
             })
             .catch(error => {
                 console.error('Error:', error);
+                uploadStatus.innerText = "Failed to upload.";
             });
         }
 
         function submitQuery() {
             let query = document.getElementById('query').value;
+            let queryStatus = document.getElementById('query-status');
+            
+            // Change status to 'Processing'
+            queryStatus.innerText = "Processing...";
 
             fetch('/ask_question', {
                 method: 'POST',
@@ -126,10 +147,13 @@
             })
             .then(response => response.json())
             .then(data => {
+                // Change status to 'Processed' and show the response
+                queryStatus.innerText = "Processed";
                 document.getElementById('response').innerText = data.answer;
             })
             .catch(error => {
                 console.error('Error:', error);
+                queryStatus.innerText = "Failed to process query.";
             });
         }
     </script>
