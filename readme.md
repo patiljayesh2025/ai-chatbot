@@ -11,6 +11,7 @@ This project is a Retrieval-Augmented Generation (RAG)-based chatbot designed to
 3. [Installation](#installation)
 4. [Running the Application](#running-the-application)
 5. [API Documentation](#api-documentation)
+6. [MLOps Pipeline](#mlops-pipeline)
 
 ---
 
@@ -88,4 +89,9 @@ FastAPI automatically generates interactive API documentation:
 - Swagger UI: http://127.0.0.1:8000/docs
 - ReDoc: http://127.0.0.1:8000/redoc
 
-#
+---
+
+## MLOps Pipeline
+
+[![MLOPS Pipeline](assets/mlops_pipeline.jpg)](https://drive.google.com/file/d/1dFo1GD8Q3ojWloTZwkoU0HaWTVKpADnb/view?usp=sharing)
+
