@@ -57,6 +57,7 @@ env\Scripts\activate  # On Windows
 Once the virtual environment is activated, install the required Python packages::
 
 ```bash
+pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
