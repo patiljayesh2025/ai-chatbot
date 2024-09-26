@@ -47,7 +47,7 @@ cd qp-ai-assessment
 You can create a virtual environment using the virtualenv package:
 
 ```bash
-python3 -m venv your_env_name
+python -m venv your_env_name
 source your_env_name/bin/activate  # On macOS/Linux
 env\Scripts\activate  # On Windows
 ```
@@ -73,7 +73,7 @@ HF_TOKEN = "Your Hugging Face Token"
 ### Step 1: Start the Uvicorn Server
 
 ```bash
- python3 -m uvicorn app:app --reload
+ python -m uvicorn app:app --reload
 ```
 
 ### Step 2: Access the App
