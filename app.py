@@ -5,7 +5,6 @@ import uvicorn
 from dotenv import load_dotenv
 from fastapi import FastAPI, File, Request, UploadFile
 from fastapi.responses import HTMLResponse, JSONResponse
-from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 load_dotenv()
@@ -21,8 +20,6 @@ embedding = Embeddings()
 embedding_model = embedding.create_embeddings_model()
 milvus = Milvus()
 
-# Mount static files (for serving CSS, JS, etc., if needed)
-app.mount("/static", StaticFiles(directory="static"), name="static")
 
 # Specify the directory where the HTML files are located
 templates = Jinja2Templates(directory="templates")
