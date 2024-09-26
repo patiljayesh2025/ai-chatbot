@@ -28,9 +28,8 @@ This project is a Retrieval-Augmented Generation (RAG)-based chatbot designed to
 The following tools and technologies are required to run the application:
 
 - Python 3.8.2+
-- [FastAPI](https://fastapi.tiangolo.com/) (for creating the API)
-- [Uvicorn](https://www.uvicorn.org/) (ASGI server to run FastAPI)
-- [Pipenv](https://pipenv.pypa.io/en/latest/) or [virtualenv](https://virtualenv.pypa.io/en/latest/) (for environment management)
+- PIP 24.2
+- [virtualenv](https://virtualenv.pypa.io/en/latest/) (for environment management)
 
 ---
 
@@ -39,8 +38,8 @@ The following tools and technologies are required to run the application:
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/patiljayesh2025/qp-ai-assessment.git
+cd qp-ai-assessment
 ```
 
 ### Step 2: Create a Virtual Environment
@@ -48,9 +47,8 @@ cd your-repo-name
 You can create a virtual environment using the virtualenv package:
 
 ```bash
-pip install virtualenv
 python3 -m venv your_env_name
-source env/bin/activate  # On macOS/Linux
+source your_env_name/bin/activate  # On macOS/Linux
 env\Scripts\activate  # On Windows
 ```
 
