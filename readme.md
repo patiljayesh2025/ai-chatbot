@@ -12,6 +12,7 @@ This project is a Retrieval-Augmented Generation (RAG)-based chatbot designed to
 4. [Running the Application](#running-the-application)
 5. [API Documentation](#api-documentation)
 6. [MLOps Pipeline](#mlops-pipeline)
+7. [App Demonstration](#app-demonstration)
 
 ---
 
@@ -95,3 +96,7 @@ FastAPI automatically generates interactive API documentation:
 
 [![MLOPS Pipeline](assets/mlops_pipeline.jpg)](https://drive.google.com/file/d/1dFo1GD8Q3ojWloTZwkoU0HaWTVKpADnb/view?usp=sharing)
 
+---
+## App Demonstration
+
+[![Watch the video](https://img.youtube.com/vi/ooG7O2KKPcY/0.jpg)](https://youtu.be/ooG7O2KKPcY)
