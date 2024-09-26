@@ -79,7 +79,7 @@ HF_TOKEN = "Your Hugging Face Token"
 
 ### Step 2: Access the App
 
-Once the server is running, visit http://127.0.0.1:8000 in your browser.
+Wait for application startup to complete , Once the server is running, visit http://127.0.0.1:8000 in your browser.
 
 ### Step 3: Explore API Docs
 
