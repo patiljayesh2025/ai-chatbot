@@ -66,7 +66,7 @@ pip install -r requirements.txt
 
 ### Step 4 : Create Hugging Face Token
 
-Create a Hugging Face token from the Hugging Face website and assign it the necessary permissions. Then, add the token to the .env file
+Create a Hugging Face token from the Hugging Face website and assign it the necessary permissions (Permission - Make calls to the serverless Inference API). Then, add the token to the .env file
 
 ```
 HF_TOKEN = "Your Hugging Face Token"
