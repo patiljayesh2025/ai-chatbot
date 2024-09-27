@@ -11,8 +11,9 @@ This project is a Retrieval-Augmented Generation (RAG)-based chatbot designed to
 3. [Installation](#installation)
 4. [Running the Application](#running-the-application)
 5. [API Documentation](#api-documentation)
-6. [MLOps Pipeline](#mlops-pipeline)
-7. [App Demonstration](#app-demonstration)
+6. [Performance Evaluation](#performance-evaluation)
+7. [MLOps Pipeline](#mlops-pipeline)
+8. [App Demonstration](#app-demonstration)
 
 ---
 
@@ -89,6 +90,48 @@ FastAPI automatically generates interactive API documentation:
 
 - Swagger UI: http://127.0.0.1:8000/docs
 - ReDoc: http://127.0.0.1:8000/redoc
+
+---
+
+## Performance Evaluation
+
+### Evaluation Metrics
+
+- Accuracy: Measures how often the chatbot's response matches the expected answer.
+- Precision: Focuses on the correctness of the positive predictions (useful if your bot gives factual or binary answers).
+- Recall: Captures how well the model identifies relevant information.
+- F1-Score: The harmonic mean of precision and recall.
+- BLEU Score: Commonly used in NLP tasks for comparing machine-generated text with human-generated text.
+- ROUGE Score: Another text similarity metric, often used for summarization tasks.
+- Human Evaluation: Since LLMs deal with complex and open-ended questions, human evaluators can rate the relevance and usefulness of responses.
+- Latency: Time taken to retrieve and generate a response.
+- Engagement Metrics: User retention, the number of follow-up queries, and overall satisfaction.
+
+### Implementation Steps:
+
+##### Collect Ground Truth:
+
+- Develop a test set of questions relevant to your RAG system's domain.
+- Annotate the expected answers manually or use pre-existing datasets.
+
+#### Build an Evaluation Script:
+
+- Use a method to evaluate responses in bulk. [Here’s](evaluation.py) an example implementation using Python.
+
+### Results
+
+A set of questions and ground truth were defined, and the evaluation results for the chatbot are presented below. You can find the evaluation script [here](evaluation.py)
+
+```json
+{
+  "Accuracy": 0.8333333333333334,
+  "Precision": 0.7142857142857143,
+  "Recall": 0.7142857142857143,
+  "F1-Score": 0.7142857142857143,
+  "Average BLEU": 0.5,
+  "Average ROUGE": 0.9166666616666665
+}
+```
 
 ---
 
