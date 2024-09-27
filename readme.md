@@ -109,7 +109,7 @@ FastAPI automatically generates interactive API documentation:
 
 ### Implementation Steps:
 
-##### Collect Ground Truth:
+#### Collect Ground Truth:
 
 - Develop a test set of questions relevant to your RAG system's domain.
 - Annotate the expected answers manually or use pre-existing datasets.
