@@ -41,8 +41,8 @@ The following tools and technologies are required to run the application:
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/patiljayesh2025/qp-ai-assessment.git
-cd qp-ai-assessment
+git clone https://github.com/patiljayesh2025/ai-chatbot.git
+cd ai-chatbot
 ```
 
 ### Step 2: Create a Virtual Environment
